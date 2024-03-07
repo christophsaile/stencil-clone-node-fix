@@ -6,56 +6,84 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface MyGrid {
+    }
+    interface MyGridElement {
+    }
+    interface MySlide {
+    }
+    interface MySlider {
+    }
+    interface MyText {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMyGridElement extends Components.MyGrid, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLMyGridElement: {
+        prototype: HTMLMyGridElement;
+        new (): HTMLMyGridElement;
+    };
+    interface HTMLMyGridElementElement extends Components.MyGridElement, HTMLStencilElement {
+    }
+    var HTMLMyGridElementElement: {
+        prototype: HTMLMyGridElementElement;
+        new (): HTMLMyGridElementElement;
+    };
+    interface HTMLMySlideElement extends Components.MySlide, HTMLStencilElement {
+    }
+    var HTMLMySlideElement: {
+        prototype: HTMLMySlideElement;
+        new (): HTMLMySlideElement;
+    };
+    interface HTMLMySliderElement extends Components.MySlider, HTMLStencilElement {
+    }
+    var HTMLMySliderElement: {
+        prototype: HTMLMySliderElement;
+        new (): HTMLMySliderElement;
+    };
+    interface HTMLMyTextElement extends Components.MyText, HTMLStencilElement {
+    }
+    var HTMLMyTextElement: {
+        prototype: HTMLMyTextElement;
+        new (): HTMLMyTextElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "my-grid": HTMLMyGridElement;
+        "my-grid-element": HTMLMyGridElementElement;
+        "my-slide": HTMLMySlideElement;
+        "my-slider": HTMLMySliderElement;
+        "my-text": HTMLMyTextElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface MyGrid {
+    }
+    interface MyGridElement {
+    }
+    interface MySlide {
+    }
+    interface MySlider {
+    }
+    interface MyText {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "my-grid": MyGrid;
+        "my-grid-element": MyGridElement;
+        "my-slide": MySlide;
+        "my-slider": MySlider;
+        "my-text": MyText;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-grid": LocalJSX.MyGrid & JSXBase.HTMLAttributes<HTMLMyGridElement>;
+            "my-grid-element": LocalJSX.MyGridElement & JSXBase.HTMLAttributes<HTMLMyGridElementElement>;
+            "my-slide": LocalJSX.MySlide & JSXBase.HTMLAttributes<HTMLMySlideElement>;
+            "my-slider": LocalJSX.MySlider & JSXBase.HTMLAttributes<HTMLMySliderElement>;
+            "my-text": LocalJSX.MyText & JSXBase.HTMLAttributes<HTMLMyTextElement>;
         }
     }
 }

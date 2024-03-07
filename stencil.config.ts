@@ -4,6 +4,7 @@ export const config: Config = {
   namespace: 'clone-node-fix',
   extras: {
     experimentalSlotFixes: true,
+    // cloneNodeFix: true,
   }
   outputTargets: [
     {

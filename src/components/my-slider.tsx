@@ -8,7 +8,7 @@ export class MySlider {
   @Element() el: HTMLElement;
 
   componentDidLoad() {
-    this.el.querySelectorAll('my-slide').forEach((slide, index) => {
+    this.el.querySelectorAll('my-slide').forEach((slide) => {
       const copySlide = slide.cloneNode(true);
       this.el.appendChild(copySlide);
     });
